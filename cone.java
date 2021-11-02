@@ -18,7 +18,7 @@ public class cone
         return (float) volume;
     }
 
-    public float latSurfaceArea(int radius, int height)
+    public float lateralSurfaceArea(int radius, int height)
     {
         double latSurfaceArea = ((Math.PI) * (radius)) * Math.sqrt(Math.pow(height, 2) + Math.pow(radius, 2));
         return (float) latSurfaceArea;
