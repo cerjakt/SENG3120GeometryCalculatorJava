@@ -1,26 +1,26 @@
 public class cylinder 
 {
-    public double volume (int radius, int height)
+    public float volume (int radius, int height)
     {
         double volume = Math.PI * radius * radius * height;
-        return volume;
+        return (float) volume;
     }
 
-    public double surfaceArea (int radius, int height)
+    public float surfaceArea (int radius, int height)
     {
         double surfaceArea = (2 * (Math.PI) * (radius) * (height)) + (2 * (Math.PI) * (radius) * (radius));
-        return surfaceArea;
+        return (float) surfaceArea;
     }
 
-    public double lateralSurfaceArea (int radius, int height)
+    public float lateralSurfaceArea (int radius, int height)
     {
         double lateralSurfaceArea =  2 * (Math.PI) * (radius) * (height);
-        return lateralSurfaceArea;
+        return (float) lateralSurfaceArea;
     }
 
-    public double topBottomArea (int radius)
+    public float topBottomArea (int radius)
     {
         double topBottomArea = (Math.PI) * radius * radius;
-        return topBottomArea;
+        return (float) topBottomArea;
     }
 }

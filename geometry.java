@@ -19,23 +19,26 @@ public class geometry
         System.out.println("3. Sphere");
         System.out.println("0. Exit\n");
         int input = scanner.nextInt();  //reading user input
-        scanner.close();
 
         if (input == 1)
         {
             promptCone();
+            scanner.close();
         }
         else if (input == 2)
         {
             promptCylinder();
+            scanner.close();
         }
         else if (input == 3)
         {
             promptSphere();
+            scanner.close();
         }   
         else if (input == 0)
         {
             System.out.println("\nTerminating Program...\n");
+            scanner.close();
         } 
     }
 
@@ -48,13 +51,22 @@ public class geometry
     System.out.println("PYTHON PROGRAM TO FIND VOLUME AND SURFACE AREA OF A CONE");
     System.out.println("--------------------------------------------------------");
 
-    int radius = Integer.parseInt(inputOutput("Please enter the radius: "));
-    int height = Integer.parseInt(inputOutput("Please enter the height: "));
+    int radius = Integer.parseInt(inputOutput("Please enter the radius: ")); //user input for radius
+    int height = Integer.parseInt(inputOutput("Please enter the height: ")); //user input for height
 
-    double volume = cone.volume(radius, height); //invokes volume method in cone class
 
-    System.out.println("\nThe Volume of a Cylinder = " + volume); //prints out the volume
+    float slant = cone.slant(radius, height); //invokes clant method in cone class
+    float surfarea = cone.surfaceArea(radius, height); //invokes surfaceArea method in cone class
+    float volume = cone.volume(radius, height); //invokes volume method in cone class
+    float latsurfarea = cone.latSurfaceArea(radius, height); //invokes latSurfaceArea method in cone class
 
+    System.out.println("Length of a Side (Slant) of a Cone = " + slant); //prints slant
+    System.out.println("The Surface Area of a Cone = " + surfarea); //prints surface area
+    System.out.println("\nThe Volume of a Cone = " + volume); //prints out the volume
+    System.out.println("The Lateral Surface Area of a Cone = " + latsurfarea); //prints lateral surface area
+    System.out.println("--------------------------------------------------------");
+    System.out.println("\n"); //new line
+    
     menu(); //invokes menu again
     }
 
@@ -71,16 +83,18 @@ public class geometry
     System.out.println("Please enter the radius: ");
     int radius = scanner.nextInt();  //reading user input
 
-    Scanner scanner2 = new Scanner(System.in);  //creating scanner object
+    //Scanner scanner2 = new Scanner(System.in);  //creating scanner object
     System.out.println("Please enter the height: ");
-    int height = scanner2.nextInt();  //reading user input
+    int height = scanner.nextInt();  //reading user input
 
     double volume = cylinder.volume(radius, height); //invokes volume method in cylinder class
 
     scanner.close(); //closes the scanner
-    scanner2.close(); //closes the scanner
+    //scanner2.close(); //closes the scanner
 
     System.out.println("\nThe Volume of a Cylinder = " + volume); //prints out the volume
+    System.out.println("--------------------------------------------------------");
+    System.out.println("\n"); //new line
 
     menu(); //invokes menu again
     }

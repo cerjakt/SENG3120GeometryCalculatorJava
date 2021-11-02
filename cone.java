@@ -1,27 +1,27 @@
 public class cone
 {
-    public double slant(int radius, int height)
+    public float slant(int radius, int height)
     {
         double slant = Math.sqrt(Math.pow(height, 2) + Math.pow(radius, 2));
-        return slant;
+        return (float) slant;
     }
 
-    public double surfaceArea(int radius, int height)
+    public float surfaceArea(int radius, int height)
     {
         double surfaceArea = ((Math.PI) * (radius)) * ((radius) + Math.sqrt(Math.pow(height, 2) + Math.pow(radius, 2)));
-        return surfaceArea;
+        return (float) surfaceArea;
     } 
 
-    public double volume(int radius, int height)
+    public float volume(int radius, int height)
     {
         double volume = (Math.PI) * Math.pow(radius, 2) * (height/3);
-        return volume;
+        return (float) volume;
     }
 
-    public double latSurfaceArea(int radius, int height)
+    public float latSurfaceArea(int radius, int height)
     {
         double latSurfaceArea = ((Math.PI) * (radius)) * Math.sqrt(Math.pow(height, 2) + Math.pow(radius, 2));
-        return latSurfaceArea;
+        return (float) latSurfaceArea;
     }
 }
 

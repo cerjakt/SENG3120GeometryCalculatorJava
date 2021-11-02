@@ -1,14 +1,14 @@
 public class sphere
 {
-    public double volume(int radius)
+    public float volume(int radius)
     {
         double volume = (4/3) * Math.PI * Math.pow(radius, 3);
-        return volume;
+        return (float) volume;
     }
 
-    public double surfaceArea(int radius)
+    public float surfaceArea(int radius)
     {
         double surfaceArea = 4 * Math.PI * Math.pow(radius, 2);
-        return surfaceArea;
+        return (float) surfaceArea;
     }
 }
