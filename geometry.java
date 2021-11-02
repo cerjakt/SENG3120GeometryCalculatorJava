@@ -17,6 +17,7 @@ public class geometry
         System.out.println("0. Exit\n");
         int input = scanner.nextInt();  //reading user input
 
+        //invoking prompts or terminating the program based on the user input
         if (input == 1)
         {
             promptCone();
